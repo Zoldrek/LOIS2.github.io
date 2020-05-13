@@ -374,6 +374,7 @@ function newFormula() {
 }
 
 function test(){
+    document.getElementById("score").innerHTML ="";
     if (testNumber<5){
         start();
         var choice;
