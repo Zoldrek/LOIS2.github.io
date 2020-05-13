@@ -375,6 +375,13 @@ function newFormula() {
 
 function test(){
     document.getElementById("score").innerHTML ="";
+    if (document.getElementById("panel1").value === "" && document.getElementById("panel1").value === ""){
+        document.getElementById("panel1").value = newFormula();
+        complex = 0;
+        document.getElementById("panel2").value = newFormula();
+        complex = 0;
+        document.getElementById("button").innerHTML ="Проверка";
+    } else
     if (testNumber<5){
         start();
         var choice;
