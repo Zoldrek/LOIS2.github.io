@@ -374,6 +374,7 @@ function newFormula() {
 }
 
 function test(){
+    document.getElementById("score").innerHTML ="";
     if (testNumber<5){
         start();
         var choice;
@@ -388,9 +389,11 @@ function test(){
         }
         testNumber++;
         if (testNumber===5){
-            document.getElementById("panel1").value = "";
-            document.getElementById("panel2").value = "";
+            document.getElementById("panel1").value = "((A&B)&(C&D))";
+            document.getElementById("panel2").value = "((A&B)|(C&D))";
             document.getElementById("score").innerHTML ="Правильных ответов - "+score+" из 5";
+            testNumber = 0;
+            score = 0;
         }
         else{
             document.getElementById("panel1").value = newFormula();
